@@ -10,6 +10,15 @@ module LPlat
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
+    config.log_level = :debug
+    config.log_tags  = [:subdomain, :uuid]
+    config.logger    = ActiveSupport::Logger.new(STDOUT)
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
+    # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
+    config.i18n.default_locale = :es
+    config.i18n.available_locales = %i[es en]
+    config.autoload_paths += Dir[Rails.root.join('app', 'policies', '*.rb')]
+    config.time_zone = 'America/Argentina/Buenos_Aires'
 
     # Configuration for the application, engines, and railties goes here.
     #

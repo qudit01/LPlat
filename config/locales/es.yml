@@ -1,0 +1,228 @@
+es:
+  logins:
+    show:
+      enter: "Iniciar sesión en mi cuenta"
+      session: "Sesión"
+      signup: "Registrarse"
+      logout: "Cerrar sesión"
+    form:
+      dni: 'DNI'
+      birthday: 'Fecha de nacimiento'
+      password: "Contraseña"
+      password_confirmation: 'Confirme su contraseña'
+      remember: "Recordarme"
+      login: "Ingresar"
+      email: "Email"
+      first_name: "Nombre"
+      last_name: "Apellido"
+      phone: "Número de teléfono"
+      address:
+        country: "País"
+        province: "Provincia"
+        city: "Ciudad"
+        street: "Calle"
+        height: "Número de calle"
+        floor: "Piso (si corresponde)"
+        door: "Número de puerta (si corresponde)"
+      dni_ph: 'Ingrese su DNI aquí...'
+      birthday_ph: 'Complete su fecha de nacimiento'
+      first_name_ph: "Ingrese su nombre"
+      last_name_ph: "Ingrese su apellido"
+      phone_ph: "Ingrese su número de teléfono"
+      address_ph:
+        country_ph: "Ingrese su país aquí..."
+        province_ph: "Ingrese su provincia aquí..."
+        city_ph: "Ingrese su ciudad aquí..."
+        street_ph: "Ingrese su calle aquí..."
+        height_ph: "Ingrese el número de su calle aquí..."
+        floor_ph: "Ingrese el piso (si corresponde) aquí..."
+        door_ph: "Ingrese el número de puerta (si corresponde) aquí..."
+      email_ph: "Ingrese su email aquí..."
+      password_ph: "Ingrese su contraseña aquí..."
+      password_confirmation_ph: 'Confirme su contraseña...'
+      password_forgotten: "Olvidé mi contraseña"
+      g_login: "Iniciar sesión con Google"
+  user_registrations:
+    new:
+      title: "Registro de Usuario"
+    register:
+      dni: 'DNI'
+      birthday: 'Fecha de nacimiento'
+      password: "Contraseña"
+      password_confirmation: 'Confirme su contraseña'
+      remember: "Recordarme"
+      login: "Iniciar sesión"
+      email: "Email"
+      first_name: 'Nombre'
+      last_name: 'Apellido'
+      phone: 'Número de teléfono'
+      address:
+        country: 'País'
+        postal_code: 'Código postal'
+        province: 'Provincia o Estado'
+        city: 'Ciudad'
+        street: 'Calle'
+        height: 'Altura'
+        floor: 'Piso (si corresponde)'
+        door: 'Número de puerta (si corresponde)'
+      dni_ph: 'Ingrese su DNI aquí...'
+      birthday_ph: 'Complete su fecha de nacimiento'
+      first_name_ph: 'Ingrese su nombre'
+      last_name_ph: 'Ingrese su apellido'
+      phone_ph: 'Ingrese su número de teléfono'
+      address_ph:
+        country_ph: 'Ingrese su país aquí...'
+        postal_code: 'Ingrese su código postal'
+        province_ph: 'Ingrese su provincia o estado aquí...'
+        city_ph: 'Ingrese su ciudad aquí...'
+        street_ph: 'Ingrese su calle aquí...'
+        height_ph: 'Ingrese el número de la calle aquí...'
+        floor_ph: 'Ingrese el piso (si corresponde) aquí...'
+        door_ph: 'Ingrese el número de puerta (si corresponde) aquí...'
+      email_ph: "Ingrese su email aquí..."
+      password_ph: "Ingrese su contraseña aquí..."
+      password_confirmation_ph: 'Confirme su contraseña...'
+      register_button: "Registrar"
+    create:
+      success: "¡Registro de usuario exitoso!"
+      failure: "Falló el registro de usuario"
+  users:
+    create:
+      success: "Usuario creado exitosamente"
+      failure: "Usuario no creado"
+    update:
+      success: "Usuario actualizado exitosamente"
+      failure: "Usuario no modificado"
+    show:
+      logout: "Cerrar sesión"
+      welcome: "Bienvenido/a %{name}"
+      ur_email: "Tu correo electrónico es: %{email}"
+    index:
+      logout: "Cerrar sesión"
+      email: "Correo electrónico"
+      user: "Usuarios"
+      new_user: "Nuevo/a usuario/a"
+      welcome: "Bienvenido/a %{name}"
+      ur_email: "Tu correo electrónico es: %{email}"
+      users: "Usuarios"
+      active: "Activo/a"
+      rol: "Rol"
+      actions: "Acciones"
+      activate: "Activar"
+    edit:
+      tittle: "Editar usuario"
+    new:
+      tittle: "Nuevo/a usuario/a"
+    form_edit:
+      save_button: "Guardar"
+    form:
+      register_button: "Registrar usuario"
+    user:
+      edit_user: "Editar"
+      toggle_button: "Desactivar"
+  activerecord:
+    errors:
+      messages:
+        blank: "Este campo no puede estar vacío"
+      models:
+        user:
+          attributes:
+            name:
+              empty: "Este campo no puede estar vacío"
+              invalid: "debe contener solo letras"
+            last_name:
+              empty: "Este campo no puede estar vacío"
+              invalid: "debe contener solo letras"
+            password:
+              empty: "Este campo no puede estar vacío"
+              too_short: "Es demasiado corta, debe contener al menos 3 caracteres"
+              invalid: "debe incluir mayúscula y número"
+            password_confirmation:
+              empty: "Este campo no puede estar vacío"
+              too_short: "Es demasiado corta, debe contener al menos 3 caracteres"
+              invalid: "debe incluir mayúscula y número"
+            email:
+              invalid: "debe contener solo letras, '.', '-', '-' o números"
+              empty: "Este campo no puede estar vacío"
+              taken: "Este correo electrónico ya está registrado"
+  controllers:
+    errors:
+      messages:
+        blank: "Este campo no puede estar vacío"
+    application:
+      not_authenticated: "Por favor, inicia sesión primero"
+  pundit:
+    default: "No puedes realizar esta acción."
+    not_authorized: "No estás autorizado/a."
+    resolve:
+      not_implemented: "Debes definir #resolve en %{class}"
+    update?: "No puedes editar este usuario."
+    create?: "No puedes crear usuarios."
+    destroy?: "No puedes eliminar este usuario."
+    show?: "No puedes ver este usuario."
+    index?: "No puedes ver los usuarios."
+    edit?: "No puedes editar este usuario."
+    new?: "No puedes crear usuarios."
+    not_found: 'Recurso no encontrado!'
+time:
+  formats:
+    default: "%a, %d %b %Y %H:%M:%S %z"
+    long: "%d de %B de %Y %H:%M"
+    short: "%H:%M"
+    shorter: "%A, %d de %b"
+    birthday: "%-d/%-m/%y"
+date:
+  formats:
+    default: "%d-%m-%Y"
+    long: "%d de %B de %Y"
+    short: "%b %d"
+    shorter: "%A, %d de %b"
+  abbr_day_names:
+    - Dom
+    - Lun
+    - Mar
+    - Mié
+    - Jue
+    - Vie
+    - Sáb
+  abbr_month_names:
+    -
+    - Ene
+    - Feb
+    - Mar
+    - Abr
+    - May
+    - Jun
+    - Jul
+    - Ago
+    - Sep
+    - Oct
+    - Nov
+    - Dic
+  day_names:
+    - Domingo
+    - Lunes
+    - Martes
+    - Miércoles
+    - Jueves
+    - Viernes
+    - Sábado
+  month_names:
+    -
+    - Enero
+    - Febrero
+    - Marzo
+    - Abril
+    - Mayo
+    - Junio
+    - Julio
+    - Agosto
+    - Septiembre
+    - Octubre
+    - Noviembre
+    - Diciembre
+  order:
+    - :day
+    - :month
+    - :year
+  not_found: 'Recurso no encontrado!'

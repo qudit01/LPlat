@@ -1,0 +1,37 @@
+<%= form_with model: @user, url: register_user_path, method: :post , class: 'form_inicio' do |form| %>
+  <%= form.label t('.first_name') %>
+  <%= form.text_field :first_name, placeholder: t('.first_name_ph') %>
+  <div><%= @user.errors[:first_name].to_sentence %></div>
+
+  <%= form.label t('.last_name') %>
+  <%= form.text_field :last_name, placeholder: t('.last_name_ph') %>
+  <div><%= @user.errors[:last_name].to_sentence %></div>
+
+  <%= form.label t('.email') %>
+  <%= form.email_field :email, placeholder: t('.email_ph') %>
+  <div><%= @user.errors[:email].to_sentence %></div>
+
+  <%= form.label t('.dni') %>
+  <%= form.number_field :dni, placeholder: t('.dni_ph') %>
+  <div><%= @user.errors[:dni].to_sentence %></div>
+
+  <%= form.label t('.phone') %>
+  <%= form.number_field :phone, placeholder: t('.phone_ph') %>
+  <div><%= @user.errors[:phone].to_sentence %></div>
+
+  <%= form.label t('.birthday') %>
+  <%= form.date_field :birthday, placeholder: t('.birthday_ph') %>
+  <div><%= @user.errors[:birthday].to_sentence %></div>
+
+  <%= form.label t('.password') %>
+  <%= form.password_field :password, placeholder: t('.password_ph') %>
+  <div><%= @user.errors[:password].to_sentence %></div>
+
+  <%= form.label t('.password_confirmation') %>
+  <%= form.password_field :password_confirmation, placeholder: t('.password_confirmation_ph') %>
+  <div><%= @user.errors[:password_confirmation].to_sentence %></div>
+
+  <br>
+  <%= form.submit t('.register_button'), class: 'btn' %>
+  <br>
+<% end %>
